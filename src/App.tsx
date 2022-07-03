@@ -1,4 +1,6 @@
 import * as React from "react";
+import AddNewItem from "./components/AddNewItem";
+import Column from "./components/Column";
 import {
   AppContainer,
   CardContainer,
@@ -9,13 +11,11 @@ import {
 function App() {
   return (
     <AppContainer>
-      <ColumnContainer>
-        <ColumnTitle>first column</ColumnTitle>
-        <CardContainer>somethong</CardContainer>
-        <CardContainer>somethong</CardContainer>
-      </ColumnContainer>
-      <ColumnContainer></ColumnContainer>
-      <ColumnContainer></ColumnContainer>
+      <Column title="something" />
+      <AddNewItem
+        toggleButtonText="+ Add another list"
+        onAdd={(val: string) => console.log(val)}
+      />
     </AppContainer>
   );
 }
